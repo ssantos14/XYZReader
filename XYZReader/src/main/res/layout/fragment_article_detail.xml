@@ -1,5 +1,5 @@
-<com.example.xyzreader.ui.DrawInsetsFrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.example.xyzreader.ui.DrawInsetsFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/draw_insets_frame_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -79,7 +79,6 @@
                     android:layout_marginLeft="@dimen/edgeMargin"
                     android:layout_marginRight="@dimen/edgeMargin"
                     android:paddingBottom="@dimen/detail_body_bottom_margin"
-                    android:textColorLink="@color/theme_accent"
                     android:textColor="@color/textColor"
                     android:textSize="@dimen/detail_body_text_size"
                     android:lineSpacingMultiplier="@fraction/detail_body_line_spacing_multiplier" />
@@ -88,17 +87,17 @@
         </FrameLayout>
     </com.example.xyzreader.ui.ObservableScrollView>
 
-    <ImageButton
+    <android.support.design.widget.FloatingActionButton
         android:id="@+id/share_fab"
-        android:stateListAnimator="@animator/fab_state_list_anim"
-        android:background="@drawable/add_fab_background"
-        android:layout_gravity="bottom|end"
-        android:layout_marginRight="@dimen/fab_margin"
-        android:layout_marginBottom="@dimen/fab_margin"
-        android:layout_width="@dimen/fab_size"
-        android:layout_height="@dimen/fab_size"
+        app:fabSize="normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:src="@drawable/ic_share"
         android:elevation="@dimen/fab_elevation"
-        android:contentDescription="@string/action_share" />
+        android:contentDescription="@string/action_share"
+        android:layout_gravity="bottom|end"
+        app:pressedTranslationZ="@dimen/fab_press_translation_z"
+        android:layout_margin="@dimen/fab_margin"
+        app:rippleColor="?android:colorControlHighlight"/>
 
 </com.example.xyzreader.ui.DrawInsetsFrameLayout>
